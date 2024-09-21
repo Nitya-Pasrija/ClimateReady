@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Navbar from "../components/Navbar";
+import VerticalTimeline from "../components/Timeline";
 import Footer from "../components/Footer";
 
 const Fellowship: React.FC = () => {
@@ -78,46 +79,30 @@ const Fellowship: React.FC = () => {
                   <p className="text-lg text-green-700">
                     Our Fellowship Program offers:
                     <ul className="list-disc list-inside mt-2">
-                      <li>A monthly stipend to cover living expenses.</li>
-                      <li>Opportunities to work on impactful environmental projects.</li>
-                      <li>Access to exclusive networking events and workshops.</li>
-                      <li>Mentorship from industry experts and thought leaders.</li>
-                      <li>A certificate upon successful completion of the fellowship.</li>
-                    </ul>
+  <li>
+    <span className="font-bold text-green-800">Personal Capacity Building: </span>
+    The fellow will participate in virtual and in-person meetings, training workshops, and consultations aimed at enhancing their personal and professional growth through targeted upskilling opportunities.
+  </li>
+  
+  <li>
+    <span className="font-bold text-green-800">Youth Mobilization & Community Engagement: </span>
+    Fellows will bring together like-minded youth by organizing community events, awareness campaigns, and other pro-environment activities, fostering a strong connection between their academic environment and community impact.
+  </li>
+  
+  <li>
+    <span className="font-bold text-green-800">Student Empowerment in Schools: </span>
+    Activation of eco clubs in nearby government schools, overseeing program implementation, organizing at least 12 weekly sessions, and ensuring active student participation in environmental initiatives.
+  </li>
+</ul>
+
+
                   </p>
                 </div>
               )}
             </div>
           </div>
         </section>
-
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-green-800 mb-4">Timeline</h2>
-          <div className="flex items-center">
-            <div className="relative flex items-center w-full">
-              <div className="absolute w-full border-t-2 border-green-300 top-1/2 transform -translate-y-1/2" />
-              <div className="flex justify-between w-full">
-                {[
-                  { label: "Applications Open", date: "1st August" },
-                  { label: "Applications Close", date: "15th August" },
-                  { label: "Results Announced", date: "19th August" },
-                  { label: "Fellowship Commences", date: "20th August" }
-                ].map((event, index) => (
-                  <div key={index} className="relative flex flex-col items-center">
-                    <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-semibold">
-                      {index + 1}
-                    </div>
-                    <div className="mt-2 text-center text-green-700">
-                      <p className="font-semibold">{event.label}</p>
-                      <p>{event.date}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <VerticalTimeline />
         <section>
           <h2 className="text-3xl font-bold text-green-800 mb-4">FAQs</h2>
           <div className="space-y-4">
