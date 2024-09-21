@@ -3,17 +3,17 @@ import Card from "./childComponents/Card";
 
 const cardData = [
   {
-    number: 500,
-    title: "Student Volunteers",
+    number: 250,
+    title: "School students Impacted",
   },
   {
-    number: 2,
-    title: "Schools",
+    number: 5,
+    title: "International and National Level Opportunities",
   },
   {
     number: 35,
-    title: "Collaborations",
-    },
+    title: "Collaborations done",
+  },
 ];
 
 const ImpactStats: React.FC = () => {
@@ -22,9 +22,9 @@ const ImpactStats: React.FC = () => {
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-5xl font-bold">Who Are We?</h2>
         <p className="mt-4 max-w-3xl mx-auto text-lg sm:text-xl leading-relaxed px-4">
-          Climate Ready is a dedicated non-profit initiative focused on empowering communities and the youth to take proactive steps towards a sustainable future. 
-          We believe in the power of education, collaboration, and active participation to make a significant impact in combating climate change. 
-          Our mission is to spread awareness, inspire action, and foster environmental stewardship across generations.
+        Project Climate- READY (Climate Representation, Education & Action with Delhi Youth) aims to nurture Youth Environmental Champions 
+        across Delhi government schools through empowered eco- clubs, integrated with holistic climate education, increased youth participation 
+        and leadership in community-level interventions, and enhanced representation in the socio- environmental discourse at different levels.
         </p>
       </div>
 

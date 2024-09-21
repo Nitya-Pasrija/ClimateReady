@@ -25,8 +25,11 @@ const Fellowship: React.FC = () => {
 
         <section className="mb-12">
           <p className="text-lg text-green-700 mb-6">
-            Our Fellowship Program is designed to empower young leaders and innovators who are passionate about environmental sustainability. This program offers a unique opportunity to work on meaningful projects that address climate change and promote sustainable practices. Participants will gain hands-on experience, receive mentorship from experts, and contribute to impactful initiatives that make a real difference. If you are enthusiastic about driving change and want to be part of a dynamic team, we encourage you to apply.{" "}
-            <a
+          Climate READY Fellowship Program seeks to empower a generation of changemakers who lead change in their communities and are capacitated to serve as well- equipped facilitators to impart and advocate for holistic climate education, implement activity- based modules in school eco clubs, and inspire others to engage in environmental stewardship. 
+          </p>
+          <p className="text-lg text-green-700 mb-6">
+          Pilot program would be running from September 21, 2024, to March 21, 2025. This 6-month long, voluntary program involves a time commitment of approximately 8-10 hours per week, where a cohort of 30 fellows will engage in various activities, trainings and projects aimed at empowering the fellows as agents of change in their colleges and communities.
+          <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSc-Hd9oeVvZB7iBl_GTStbqQ9dG0mo4RZRAyFerUYJjSOeavw/viewform"
               className="font-bold text-green-700 underline"
               target="_blank"
