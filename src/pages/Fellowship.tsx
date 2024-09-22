@@ -41,7 +41,6 @@ const Fellowship: React.FC = () => {
             .
           </p>
         </section>
-
         <section className="mb-12">
           <div className="bg-green-100 p-6 rounded-lg shadow-md">
             <div className="flex border-b border-green-300">
@@ -79,23 +78,21 @@ const Fellowship: React.FC = () => {
                   <p className="text-lg text-green-700">
                     Our Fellowship Program offers:
                     <ul className="list-disc list-inside mt-2">
-  <li>
-    <span className="font-bold text-green-800">Personal Capacity Building: </span>
-    The fellow will participate in virtual and in-person meetings, training workshops, and consultations aimed at enhancing their personal and professional growth through targeted upskilling opportunities.
-  </li>
-  
-  <li>
-    <span className="font-bold text-green-800">Youth Mobilization & Community Engagement: </span>
-    Fellows will bring together like-minded youth by organizing community events, awareness campaigns, and other pro-environment activities, fostering a strong connection between their academic environment and community impact.
-  </li>
-  
-  <li>
-    <span className="font-bold text-green-800">Student Empowerment in Schools: </span>
-    Activation of eco clubs in nearby government schools, overseeing program implementation, organizing at least 12 weekly sessions, and ensuring active student participation in environmental initiatives.
-  </li>
-</ul>
-
-
+                      <li>
+                        <span className="font-bold text-green-800">Personal Capacity Building: </span>
+                        The fellow will participate in virtual and in-person meetings, training workshops, and consultations aimed at enhancing their personal and professional growth through targeted upskilling opportunities.
+                      </li>
+                        
+                      <li>
+                        <span className="font-bold text-green-800">Youth Mobilization & Community Engagement: </span>
+                        Fellows will bring together like-minded youth by organizing community events, awareness campaigns, and other pro-environment activities, fostering a strong connection between their academic environment and community impact.
+                      </li>
+                        
+                      <li>
+                        <span className="font-bold text-green-800">Student Empowerment in Schools: </span>
+                        Activation of eco clubs in nearby government schools, overseeing program implementation, organizing at least 12 weekly sessions, and ensuring active student participation in environmental initiatives.
+                      </li>
+                    </ul>
                   </p>
                 </div>
               )}
