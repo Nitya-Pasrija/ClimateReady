@@ -3,7 +3,7 @@ import Card from "./childComponents/Card";
 
 const cardData = [
   {
-    number: 250,
+    number: 500,
     title: "School students Impacted",
   },
   {

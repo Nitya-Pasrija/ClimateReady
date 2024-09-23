@@ -104,11 +104,11 @@ const Fellowship: React.FC = () => {
           <h2 className="text-3xl font-bold text-green-800 mb-4">FAQs</h2>
           <div className="space-y-4">
             {[
-              { question: "What is the duration of the fellowship?", answer: "The fellowship lasts for 6 months, starting from 20th August." },
-              { question: "How many fellows will be selected?", answer: "We typically select 10-15 fellows each year." },
-              { question: "Can international students apply?", answer: "Yes, international students are welcome to apply, provided they meet the eligibility criteria." },
+              { question: "What is the duration of the fellowship?", answer: "The fellowship lasts for 6 months, starting from 20th September." },
+              { question: "How many fellows will be selected?", answer: "We generally select 15 fellows each year." },
+              { question: "Can international students apply?", answer: "Unfortunately, this is an in-person initiative, so participants need to be based in India. However, we encourage you to stay connected with us through our social media channels :)" },
               { question: "Is the fellowship remote or in-person?", answer: "The fellowship may have both remote and in-person components depending on the project." },
-              { question: "How can I contact the program coordinators?", answer: "You can contact us via email at contact@climateready.org for any queries related to the fellowship." }
+              { question: "How can I contact the program coordinators?", answer: "You can contact us via email at projectclimateready@gmail.com for any queries related to the fellowship." }
             ].map((faq, index) => (
               <div
                 key={index}
