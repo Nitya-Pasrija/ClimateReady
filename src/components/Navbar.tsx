@@ -40,10 +40,10 @@ const Navbar: React.FC<NavProps> = () => {
           </li>
           <li>
             <Link
-              to="#"
+              to="/get-started"
               className="no-underline text-white hover:text-green-300 transition-colors"
             >
-              SignUp
+              Get Started
             </Link>
           </li>
         </ul>

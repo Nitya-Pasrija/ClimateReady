@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Fellowship from "./pages/Fellowship";
 import Vision from "./pages/Vision";
+import GetStarted from "./pages/GetStarted";
 
 const ClimateReady = () => {
   return (
@@ -11,6 +12,7 @@ const ClimateReady = () => {
         <Route path="/" element={<Home />} />
         <Route path="/fellowship" element={<Fellowship />} />
         <Route path="/vision" element={<Vision />} />
+        <Route path="/get-started" element = {<GetStarted />}/>
       </Routes>
     </Router>
   );
