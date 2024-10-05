@@ -1,10 +1,43 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase"; // Adjust the path if necessary
 
 const AuthSwitch: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"signup" | "signin">("signup");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [institute, setInstitute] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
-  const handleTabClick = (tab: "signup" | "signin") => {
-    setActiveTab(tab);
+  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      console.log("User signed up:", userCredential.user);
+      window.location.assign("/");
+    } catch (error: any) {
+      setError(error.message);
+      console.error("Error signing up:", error);
+    }
+  };
+
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log("User signed in:", userCredential.user);
+      // Redirect to the home page
+      window.location.assign("/");
+    } catch (error: any) {
+      setError(error.message);
+      console.error("Error logging in:", error);
+    }
   };
 
   return (
@@ -15,7 +48,7 @@ const AuthSwitch: React.FC = () => {
             className={`flex-1 py-2 text-lg font-semibold ${
               activeTab === "signup" ? "bg-green-200 text-green-800" : "text-green-600"
             }`}
-            onClick={() => handleTabClick("signup")}
+            onClick={() => setActiveTab("signup")}
           >
             Sign Up
           </button>
@@ -23,7 +56,7 @@ const AuthSwitch: React.FC = () => {
             className={`flex-1 py-2 text-lg font-semibold ${
               activeTab === "signin" ? "bg-green-200 text-green-800" : "text-green-600"
             }`}
-            onClick={() => handleTabClick("signin")}
+            onClick={() => setActiveTab("signin")}
           >
             Sign In
           </button>
@@ -33,7 +66,7 @@ const AuthSwitch: React.FC = () => {
           {activeTab === "signup" && (
             <div>
               <h2 className="text-lg font-bold text-green-800 mb-4">Create an Account</h2>
-              <form>
+              <form onSubmit={handleSignup}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-green-700">
                     Name:
@@ -43,6 +76,9 @@ const AuthSwitch: React.FC = () => {
                     id="name"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -55,6 +91,9 @@ const AuthSwitch: React.FC = () => {
                     id="institute"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your current institute"
+                    value={institute}
+                    onChange={(e) => setInstitute(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -67,6 +106,9 @@ const AuthSwitch: React.FC = () => {
                     id="email"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -79,8 +121,13 @@ const AuthSwitch: React.FC = () => {
                     id="password"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                   />
                 </div>
+
+                {error && <p className="text-red-500 mb-4">{error}</p>}
 
                 <button
                   type="submit"
@@ -89,13 +136,19 @@ const AuthSwitch: React.FC = () => {
                   Sign Up
                 </button>
               </form>
+              <p className="mt-4 text-center">
+                Already have an account?{" "}
+                <Link to="#" onClick={() => setActiveTab("signin")} className="text-green-600 hover:underline">
+                  Sign In here
+                </Link>
+              </p>
             </div>
           )}
 
           {activeTab === "signin" && (
             <div>
               <h2 className="text-lg font-bold text-green-800 mb-4">Sign In to Your Account</h2>
-              <form>
+              <form onSubmit={handleLogin}>
                 <div className="mb-4">
                   <label htmlFor="email" className="block text-green-700">
                     Email:
@@ -105,6 +158,9 @@ const AuthSwitch: React.FC = () => {
                     id="email"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -117,8 +173,13 @@ const AuthSwitch: React.FC = () => {
                     id="password"
                     className="w-full p-2 border border-green-300 rounded"
                     placeholder="Enter your password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                   />
                 </div>
+
+                {error && <p className="text-red-500 mb-4">{error}</p>}
 
                 <button
                   type="submit"
@@ -127,6 +188,12 @@ const AuthSwitch: React.FC = () => {
                   Sign In
                 </button>
               </form>
+              <p className="mt-4 text-center">
+                Don&apos;t have an account?{" "}
+                <Link to="#" onClick={() => setActiveTab("signup")} className="text-green-600 hover:underline">
+                  Sign up here
+                </Link>
+              </p>
             </div>
           )}
         </div>
