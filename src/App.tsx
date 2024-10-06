@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Fellowship from "./pages/Fellowship";
 import Vision from "./pages/Vision";
 import GetStarted from "./pages/GetStarted";
+import Dashboard from "./pages/Dashboard";
 
 const ClimateReady = () => {
   return (
@@ -13,6 +14,7 @@ const ClimateReady = () => {
         <Route path="/fellowship" element={<Fellowship />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/get-started" element = {<GetStarted />}/>
+        <Route path="/dashboard" element = {<Dashboard />}/>
       </Routes>
     </Router>
   );

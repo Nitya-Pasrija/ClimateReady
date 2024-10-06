@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase"; // Adjust the path if necessary
+import { auth, firestore } from "../firebase";
+import { setDoc, doc } from "firebase/firestore";
 
 const AuthSwitch: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"signup" | "signin">("signup");
@@ -17,11 +18,19 @@ const AuthSwitch: React.FC = () => {
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("User signed up:", userCredential.user);
-      window.location.assign("/");
+      const user = userCredential.user;
+
+      await setDoc(doc(firestore, "users", user.uid), {
+        uid: user.uid,
+        name,
+        email,
+        institute,
+        createdAt: new Date(),
+      });
+
+      window.location.assign("/dashboard");
     } catch (error: any) {
       setError(error.message);
-      console.error("Error signing up:", error);
     }
   };
 
@@ -31,12 +40,9 @@ const AuthSwitch: React.FC = () => {
 
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      console.log("User signed in:", userCredential.user);
-      // Redirect to the home page
-      window.location.assign("/");
+      window.location.assign("/dashboard");
     } catch (error: any) {
       setError(error.message);
-      console.error("Error logging in:", error);
     }
   };
 
