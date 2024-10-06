@@ -39,7 +39,7 @@ const AuthSwitch: React.FC = () => {
     setError(null);
 
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
       window.location.assign("/dashboard");
     } catch (error: any) {
       setError(error.message);
@@ -74,9 +74,7 @@ const AuthSwitch: React.FC = () => {
               <h2 className="text-lg font-bold text-green-800 mb-4">Create an Account</h2>
               <form onSubmit={handleSignup}>
                 <div className="mb-4">
-                  <label htmlFor="name" className="block text-green-700">
-                    Name:
-                  </label>
+                  <label htmlFor="name" className="block text-green-700">Name:</label>
                   <input
                     type="text"
                     id="name"
@@ -89,9 +87,7 @@ const AuthSwitch: React.FC = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="institute" className="block text-green-700">
-                    Institute:
-                  </label>
+                  <label htmlFor="institute" className="block text-green-700">Institute:</label>
                   <input
                     type="text"
                     id="institute"
@@ -104,9 +100,7 @@ const AuthSwitch: React.FC = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="email" className="block text-green-700">
-                    Email:
-                  </label>
+                  <label htmlFor="email" className="block text-green-700">Email:</label>
                   <input
                     type="email"
                     id="email"
@@ -119,9 +113,7 @@ const AuthSwitch: React.FC = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="password" className="block text-green-700">
-                    Password:
-                  </label>
+                  <label htmlFor="password" className="block text-green-700">Password:</label>
                   <input
                     type="password"
                     id="password"
@@ -156,9 +148,7 @@ const AuthSwitch: React.FC = () => {
               <h2 className="text-lg font-bold text-green-800 mb-4">Sign In to Your Account</h2>
               <form onSubmit={handleLogin}>
                 <div className="mb-4">
-                  <label htmlFor="email" className="block text-green-700">
-                    Email:
-                  </label>
+                  <label htmlFor="email" className="block text-green-700">Email:</label>
                   <input
                     type="email"
                     id="email"
@@ -171,9 +161,7 @@ const AuthSwitch: React.FC = () => {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="password" className="block text-green-700">
-                    Password:
-                  </label>
+                  <label htmlFor="password" className="block text-green-700">Password:</label>
                   <input
                     type="password"
                     id="password"
