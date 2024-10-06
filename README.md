@@ -6,7 +6,7 @@ Welcome to ClimateREADY! This web application is designed to advance environment
 
 ## Demo
 
-Check out the [live demo](climate-ready.vercel.app) of ClimateREADY to see it in action!
+Check out the [live demo](https://climate-ready.vercel.app/) of ClimateREADY to see it in action!
 
 ## Features
 

@@ -10,7 +10,6 @@ interface Event {
   event: string;
   link: string;
   location: string;
-  date: string;
 }
 
 const Actions: React.FC = () => {
@@ -81,7 +80,6 @@ const Actions: React.FC = () => {
                 <p className="text-sm text-gray-600">Location: {event.location}</p>
                 <p className="text-sm text-gray-600">Created By: {event.createdBy}</p>
                 <p className="text-gray-700">{event.details}</p>
-                <p className="text-sm text-gray-500">Date: {new Date(event.date).toLocaleDateString()}</p>
                 <a
                   href={event.link}
                   target="_blank"
