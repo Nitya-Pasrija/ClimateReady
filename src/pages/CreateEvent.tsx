@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ReportForm from "../components/ReportForm";
+import EventMaker from "../components/EventMaker";
 
 type HomeProps = {};
 
-const Report: React.FC<HomeProps> = () => {
+const CreateEvent: React.FC<HomeProps> = () => {
   return (
     <>
       <Navbar />
-      <ReportForm />
+      <EventMaker />
       <Footer />
     </>
   );
 };
-export default Report;
+export default CreateEvent;

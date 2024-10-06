@@ -8,7 +8,7 @@ type NavProps = {};
 const Navbar: React.FC<NavProps> = () => {
   const [user, setUser] = useState<{ name: string | null; email: string | null } | null>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -25,7 +25,7 @@ const Navbar: React.FC<NavProps> = () => {
   const handleLogout = async () => {
     await signOut(auth);
     setUser(null);
-    navigate("/"); 
+    navigate("/");
   };
 
   return (
@@ -78,6 +78,20 @@ const Navbar: React.FC<NavProps> = () => {
                     onClick={() => setDropdownOpen(false)}
                   >
                     Dashboard
+                  </Link>
+                  <Link
+                    to="/create-event"
+                    className="block px-4 py-2 text-black hover:bg-green-100"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    Create Event
+                  </Link>
+                  <Link
+                    to="/resources"
+                    className="block px-4 py-2 text-black hover:bg-green-100"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    Resources
                   </Link>
                   <button
                     onClick={handleLogout}

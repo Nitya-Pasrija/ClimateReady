@@ -1,17 +1,17 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ReportForm from "../components/ReportForm";
+import Guides from "../components/Guides";
 
 type HomeProps = {};
 
-const Report: React.FC<HomeProps> = () => {
+const Resources: React.FC<HomeProps> = () => {
   return (
     <>
       <Navbar />
-      <ReportForm />
+      <Guides/>
       <Footer />
     </>
   );
 };
-export default Report;
+export default Resources;
