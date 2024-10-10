@@ -7,8 +7,8 @@ interface Resource {
 }
 
 const resources: Resource[] = [
-  { name: "Introduction to Climate Change", time: 15, link: "https://example.com/resource1" },
-  { name: "Sustainable Living Guide", time: 20, link: "https://example.com/resource2" },
+  { name: "Introduction to Climate Change", time: 15, link: "https://padlet.com/priyaneha9811/timeline-hm10mr8ucg0lslp0" },
+  { name: "Welcome Kit", time: 20, link: "https://drive.google.com/file/d/1jJv8J-lbvmSnVTjkR9nEKJu-nEulWNhj/view?usp=drivesdk" },
   { name: "Reducing Carbon Footprint", time: 30, link: "https://example.com/resource3" },
   { name: "Renewable Energy Basics", time: 25, link: "https://example.com/resource4" },
   { name: "The Impact of Plastic Pollution", time: 35, link: "https://example.com/resource5" },

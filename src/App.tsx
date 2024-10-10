@@ -9,6 +9,7 @@ import Profile from "./pages/Profile";
 import CreateEvent from "./pages/CreateEvent";
 import Resources from "./pages/Resources";
 import Report from "./pages/Report";
+import LeaderBoard from "./pages/LeaderBoard";
 
 const ClimateReady = () => {
   return (
@@ -23,6 +24,7 @@ const ClimateReady = () => {
         <Route path="/create-event" element = {<CreateEvent />}/>
         <Route path="/resources" element = {<Resources />}/>
         <Route path="/report-event" element = {<Report />}/>
+        <Route path="/leaderboard" element = {<LeaderBoard />}/>
       </Routes>
     </Router>
   );

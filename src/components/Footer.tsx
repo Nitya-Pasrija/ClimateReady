@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = () => {
         <ul className="flex justify-center gap-8 font-semibold mb-8">
           <li>
             <a
-              href="mailto:contact@climateready.org"
+              href="mailto:projectclimateready@gmail.com"
               className="text-white hover:text-green-200 transition-colors"
             >
               <FaEnvelope className="text-2xl" />
