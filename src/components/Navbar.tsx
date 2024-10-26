@@ -87,6 +87,13 @@ const Navbar: React.FC<NavProps> = () => {
                     Create Event
                   </Link>
                   <Link
+                    to="/leaderboard"
+                    className="block px-4 py-2 text-black hover:bg-green-100"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    Leaderboard
+                  </Link>
+                  <Link
                     to="/resources"
                     className="block px-4 py-2 text-black hover:bg-green-100"
                     onClick={() => setDropdownOpen(false)}
