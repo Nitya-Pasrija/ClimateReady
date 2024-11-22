@@ -8,11 +8,11 @@ interface Resource {
 
 const resources: Resource[] = [
   { name: "Introduction to Climate Change", time: 15, link: "https://padlet.com/priyaneha9811/timeline-hm10mr8ucg0lslp0" },
-  { name: "Welcome Kit", time: 20, link: "https://drive.google.com/file/d/1jJv8J-lbvmSnVTjkR9nEKJu-nEulWNhj/view?usp=drivesdk" },
-  { name: "Reducing Carbon Footprint", time: 30, link: "https://example.com/resource3" },
-  { name: "Renewable Energy Basics", time: 25, link: "https://example.com/resource4" },
-  { name: "The Impact of Plastic Pollution", time: 35, link: "https://example.com/resource5" },
-  { name: "Climate Change Advocacy", time: 40, link: "https://example.com/resource6" },
+  { name: "Welcome Kit", time: 50, link: "https://drive.google.com/file/d/1jJv8J-lbvmSnVTjkR9nEKJu-nEulWNhj/view?usp=drivesdk" },
+  { name: "Emissions Gap Report: UNEP", time: 30, link: "https://www.unep.org/resources/emissions-gap-report-2023" },
+  { name: "Climate Change and Economy", time: 25, link: "https://www.technologyreview.com" },
+  { name: "Climate Crisis: A Race We Can Win", time: 20, link: "https://www.un.org/en/un75/climate-crisis-race-we-can-win" },
+  { name: "Thought Leadership: Youth Ki Awaaz", time: 12, link: "https://www.youthkiawaaz.com/2024/08/thought-leadership-for-a-sustainable-future/" },
 ];
 
 const Guides: React.FC = () => {
